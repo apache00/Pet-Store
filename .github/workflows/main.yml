@@ -15,6 +15,10 @@ jobs:
     runs-on: windows-latest
     
     steps:
+      - name: set env 
+        env:
+          ASPNETCORE_ENVIRONMENT: "Production"
+      - name: echo "Setting ASPNETCORE_ENVIRONMENT..."
       - uses: actions/checkout@v2
       
       - name: Setup .NET
